@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useCallback } from "react";
+import { useEffect, useRef, useCallback } from "react";
 
 const CustomCursor = () => {
   const cursorRef = useRef<HTMLDivElement | null>(null);
@@ -27,7 +27,7 @@ const CustomCursor = () => {
   }, []);
 
   // Optimized mouse move handler
-  const handleMouseMove = useCallback((e) => {
+  const handleMouseMove = useCallback((e: any) => {
     mousePosition.current.x = e.clientX;
     mousePosition.current.y = e.clientY;
   }, []);
