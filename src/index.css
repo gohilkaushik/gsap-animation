@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+body {
+  overflow-x: hidden;
+}
+
+.box1,
+.box2,
+.box3 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 40px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.box2 {
+  background-color: yellow;
+}
+.box3 {
+  background-color: goldenrod;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page1,
+.page2,
+.page3 {
+  @apply flex h-screen justify-center items-center bg-gray-400;
+}
+.page2 .box {
+  background: yellow;
+}
+.page3 .box {
+  background: blueviolet;
+}
+.page2 {
+  background-color: cadetblue;
+}
+.page3 {
+  background-color: rgb(156, 165, 117);
+}
+.cursor {
+  position: fixed; /* or absolute */
+  pointer-events: none; /* prevents interfering with mouse events */
+  z-index: 9999;
+  /* Add visual styling */
+  width: 20px;
+  height: 20px;
+  background: rgb(238, 255, 0);
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.main {
+  background-color: red;
+  width: 500px;
+  height: 500px;
+}
+
+.main_sidebar {
+  background: url("../src/images/sebastian.jpg") no-repeat center / cover;
+  height: calc(100vh - 48px);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.sidebar {
+  width: 500px;
+  position: fixed;
+  top: 48px;
+  height: 100%;
+  right: -40%;
+  background-color: rgba(248, 186, 92, 0.486);
+  backdrop-filter: blur(10px);
+}
+.sidebar ul li {
+  font-size: 40px;
+  padding: 20px;
+}
+.div-1,
+.div-4,
+.div-2,
+.div-3 {
+  @apply h-screen;
+}
+.div-1 {
+  @apply bg-red-400;
+}
+.div-2 {
+  @apply bg-yellow-300;
+}
+.div-3 {
+  @apply bg-green-300;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(235, 15, 150);
+}
+
+.div-4 span {
+  background-image: linear-gradient(yellow, yellow);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 1s ease-in-out;
+}
+.active {
+  background-size: 100% 100% !important;
+}
